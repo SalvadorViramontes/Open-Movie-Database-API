@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMDB API</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script src="app2.js"></script>
+</head>
+<body>
+    <div class="panel">
+        <div class="panel-title">
+            <h1>Consulta de Películas con OMDB API</h1>
+        </div>
+        <div class="panel-body">
+            <div id="search-form">
+                <input type="text" name="search-bar" id="search-bar">
+                <br>
+                <br>
+                <button class="search-btn" id="exact">Título Exacto</button>
+                <button class="search-btn" id="approx">Búsqueda Aproximada</button>
+            </div>
+            <div class="panel-footer">
+                <button class="left">&larr;</button>
+                <div id="paging-info">
+                    Mostrando&nbsp;
+                    <span id="page"></span>&nbsp;
+                    de&nbsp;
+                    <span id="total"></span>
+                </div> 
+                <button class="right">&rarr;</button> 
+            </div>
+            <div id="panel-scroll">
+                
+            </div>
+            <div id="waiting">
+                <img src="./img/ajax-loader.gif" alt="waiting...">
+            </div>
+            <div id="error">
+                Lo sentimos, su búsqueda no dió resultados :(
+            </div>
+        </div>
+    </div>
+</body>
+</html>
